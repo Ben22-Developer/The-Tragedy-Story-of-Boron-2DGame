@@ -178,7 +178,10 @@ playLevel3.addEventListener('touchstart',() => {
     alert("Hi! this application is based on keyBoard events we're still working on mobile touch events.")
 })
 
-window.addEventListener('load',() => {
+const backGround = new Image();
+backGround.src = './Files/Screenshot 2025-04-10 194708.png';
+
+backGround.addEventListener('load',() => {
     loading.style.display = 'none';
     gameInterface.style.display = 'block';
 })
