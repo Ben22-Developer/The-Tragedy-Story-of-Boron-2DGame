@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONLINE | BOUNCING | TALE</title>
+    <link rel="icon" href="./Files/ball.jpg">
+    <link rel="stylesheet" href="./Files/styles.css">
+    <script defer type="module" src="./Files/gameField.js"></script>
+    <script defer type="module" src="./Files/userLogic.js"></script>
+</head>
+<body>
+    <main>
+        <section id="gameField">
+            <canvas>
+            </canvas>
+            <h3 id="nextRound"></h3>
+            <div id="cover"></div>
+            <div id="questionAnswer">
+                <p id="question"></p>
+                <p id="answers" style="color: rgb(127, 214, 255);"></p>
+                <p id="countDown"></p>
+            </div>
+        </section>
+        <section id="gameInterface">
+            <h1 id="gameTitle">The Tragic Story of Boron: <br>A 2D Adventure Game of Survival</h1>
+            <div id="gameChaptersDiv">
+                <h2 id="gameShortCutsTitle">Key Board Events for playing the game <br> and short cuts ⮟</h2>
+                <ul id="gameShortCuts" class="invisible">
+                    <li><span class="levelChapter">Arrow up:</span> Moves the ball up.</li>
+                    <li><span class="levelChapter">Arrow right:</span> Moves the ball to the right side.</li>
+                    <li><span class="levelChapter">Arrow left:</span> Moves the ball to the left side.</li>
+                    <li><span class="levelChapter">Alt+r or Alt+R</span> Return to the starting page.</li>
+                    <li><span class="levelChapter">Alt+s or Alt+S</span> To turn the sound off or on.</li>
+                </ul>
+                <h2 id="gameChaptersTitle">A short Story Of Boron</h2>
+                <dialog>
+                    <div id="gameChaptersDescription">
+                        <button id="closeModal">❌</button>
+                        <p style="font-weight: bold;"><i>Step into the risky world of Boron, a brave ball navigating through danger, hope, and critical enemies in a hunt for it's safety.</i></p>
+                        <h2>The Ruthless Monsters</h2>
+                        <ol>
+                            <li class="characterList">
+                                <h3 class="characterTitle">Rango the Boost Blood</h3>
+                                <ul>
+                                    <li class="characterDescription">Shoots powerful bomb shields with deadly precision.</li>
+                                    <li class="characterDescription">A constant barrier between Boron and his goal.</li>
+                                </ul>
+                            </li>
+                            <li class="characterList">
+                                <h3 class="characterTitle">Boda</h3>
+                                <ul>
+                                    <li class="characterDescription">The ultimate nemesis, appearing towards the climax of Chapter 3.</li>
+                                    <li class="characterDescription">Can wipe Boron out entirely, draining his life from 100% to 0% with unparalleled danger.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                        <h2>The Loyal Backers</h2>
+                        <ol>
+                            <li class="characterList">
+                                <h3 class="characterTitle">Blinky</h3>
+                                <ul>
+                                    <li class="characterDescription">Boron’s twin, always ready to replenish his life when it drops below 70%.</li>
+                                    <li class="characterDescription">A reliable of hope in the darkest moments.</li>
+                                </ul>
+                            </li>
+                            <li class="characterList">
+                                <h3 class="characterTitle">Cosmo</h3>
+                                <ul>
+                                    <li class="characterDescription">An intelligent tricky guider who challenges the player with clever knowledge puzzles.</li>
+                                    <li class="characterDescription">Helps Boron gain life and move closer to victory.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                        <h2>The Journey</h2>
+                        <p>
+                            Players must be skillful individuals to defeat Rango and Boda, by solving Cosmo’s puzzles, 
+                            and keep Boron alive with Blinky’s aid. 
+                            Only the cleverest and bravest will make it to the end of Chapter 3 and secure Boron’s freedom.  
+                        </p>
+                        <h2>Slogan</h2>
+                        <p>
+                            <i>
+                                "Will Boron escape the chaos, or will he remain struggling in the tragedy? The story is in your hands." 
+                                <br>🚀🚀🚀 Let's go 🚀🚀🚀<br>
+                            </i>
+                        </p>
+                    </div> 
+                </dialog>
+            </div> 
+            <h2 style="color: aliceblue; margin-bottom: 1rem;"><ins>Game Levels</ins></h2>
+            <div id="allGameLevels">
+                <article class="aGameLevel">
+                    <figure>
+                        <img class="gameLevelImage" src="./Files/chapter1.png" alt="chapter 1 image">
+                        <figcaption>
+                            <span class="levelChapter">Chapter 1:</span> Players learn to control Boron with keyboard events—using 
+                            "Arrow Up" to jump, "Arrow Left" to move left, and "Arrow Right" to move right—building 
+                            speed and confidence in their movements.
+                        </figcaption>
+                    </figure>
+                    <button class="playBtn" id="playLevel1" value="1"></button>
+                </article>
+                <article class="aGameLevel">
+                    <figure>
+                        <img class="gameLevelImage" src="./Files/chapter2.png" alt="chapter 2 image">
+                        <figcaption>
+                            <span class="levelChapter">Chapter 2:</span> Boron faces his first enemy, Rango the Boost Blood, relying on Blinky's 
+                            support to survive intense attacks and stay strong.
+                        </figcaption>
+                    </figure>
+                    <button class="playBtn" id="playLevel2" value="2"></button>
+                </article>
+                <article class="aGameLevel">
+                    <figure>
+                        <img class="gameLevelImage" src="./Files/chapter3.png" alt="chapter 3 image">
+                        <figcaption>
+                            <span class="levelChapter">Chapter 3:</span> The ultimate challenge unfolds as Boron battles both Rango and the deadly Boda, 
+                            with Blinky providing life boosts and Cosmo testing the player's knowledge for extra aid.<br>
+                            If you pass the question given by Cosmo Boda will go away,
+                            but when you fail to answer or provide a wrong answer Boda will still advance towards you, 
+                            but again you will be given another question to get him away.
+                        </figcaption>
+                    </figure>
+                    <button class="playBtn" id="playLevel3" value="3"></button>
+                </article>
+            </div>
+            <div id="settingsBtn">
+                <button id="soundBtn" value="onPause">SOUND ON</button>
+                <button id="resetGame">Game Reset</button>
+            </div>
+            <audio src="./Files/mix.mp3"></audio>
+            <footer>
+                Coded And Designed By Ben <br>
+                Click <a href="https://github.com/Ben22-Developer" target="_blank">ME</a> to visit my GitHub Account
+            </footer> 
+        </section>
+        <section id="restriction">
+            <h2>Hey our application is designed for devices above 630px and specifically utilizing key boards events. <br> Thank you!</h2>
+        </section>
+    </main> 
+</body>
+</html>  
