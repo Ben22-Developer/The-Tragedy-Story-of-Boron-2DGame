@@ -767,6 +767,7 @@ function incrementScore () {
 }
 
 function changeColorBasedOnScore () {
+    console.log(modules.playerObject.playerPoints)
     if (modules.playerObject.playerPoints/modules.playerObject.totalScore > 0.8) {
         modules.playerObject.playerScoreColor = ' rgb(1, 220, 1)';
     }
