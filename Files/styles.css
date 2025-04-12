@@ -79,7 +79,7 @@ canvas {
     background-position: center;
     background-size: cover;
     background-attachment: scroll;
-    display: block; 
+    display: none; 
 }
 
 #gameTitle {
@@ -256,6 +256,28 @@ footer {
     }
 }
 
+#ballContainer {
+    height: 25rem;
+    width: 25rem;
+    background-color: aliceblue;
+    border-radius: 10%;
+    border: 5px solid;
+}
+
+#loadingBall {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    animation: loadingBall 3000ms infinite alternate-reverse;
+}
+
+#loadingBall,#ballContainer {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
 ::-webkit-scrollbar {
     width:1rem;
 }
@@ -310,5 +332,16 @@ footer {
         top:50%;
         left:50%;
         transform: translateX(-50%) translateY(-50%);
+    }
+}
+
+@keyframes loadingBall {
+    0%,50% {
+        transform: translateX(-50%) translateY(-50%) scale(.4);
+        background-color: darkblue;
+    }
+    100% {
+        transform: translateX(-50%) translateY(-50%) scale(1);
+        background-color: rgb(0, 0, 0);
     }
 }

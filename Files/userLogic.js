@@ -26,6 +26,7 @@ const gameShortCutsTitle = document.getElementById('gameShortCutsTitle');
 const gameShortCuts = document.getElementById('gameShortCuts');
 const soundBtn = document.getElementById('soundBtn');
 const song = document.querySelector('audio');
+const loading = document.getElementById('loading');
 
 function checkIfUserCanPlayTheLevel (level) {
     let i = 0;
@@ -175,6 +176,11 @@ playLevel2.addEventListener('touchstart',() => {
 
 playLevel3.addEventListener('touchstart',() => {
     alert("Hi! this application is based on keyBoard events we're still working on mobile touch events.")
+})
+
+window.addEventListener('load',() => {
+    loading.style.display = 'none';
+    gameInterface.style.display = 'block';
 })
 
 function updatePageAccordingToLocalStorage () {
